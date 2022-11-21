@@ -21,10 +21,6 @@ namespace Model
         G,
         Gsharp,
 
-        Dflat,
-        Eflat,
-        Gflat,
-        Aflat,
-        Bflat
+        Unknown
     }
 }

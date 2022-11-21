@@ -15,7 +15,7 @@ namespace Model
         public double Frequency;
         public char KeyBind { get; set; }
 
-        public Key(Octaves octave, Notes note)
+        public Key(Octaves octave, Notes note, char keyBind)
         {
             _octave = octave;
             _note = note;
