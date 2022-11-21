@@ -15,6 +15,7 @@
            
         }
 
+        
 
 
         /// <summary>
@@ -29,7 +30,7 @@
             {                      
                 char currentChar = (char)(previous.KeyBind);
 
-                if (previous._note.ToString().Contains("sharp") && !currentnote.ToString().Contains("sharp"))
+                if (previous.Note.ToString().Contains("sharp") && !currentnote.ToString().Contains("sharp"))
                 {
                     return currentChar -= (char)31;
                 }else if (currentnote.ToString().Contains("sharp"))

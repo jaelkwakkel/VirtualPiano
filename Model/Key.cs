@@ -9,16 +9,18 @@ namespace Model
 
     public class Key
     {
-        private Octaves _octave;
-        public Notes _note;
-        public Boolean PressedDown = false;
-        public double Frequency;
+        
+
+        public Octaves Octave { get; set; }
+        public Boolean PressedDown { get; set; }
+        public Notes Note { get; set; }
+        public double Frequency { get; set; }
         public char KeyBind { get; set; }
 
         public Key(Octaves octave, Notes note, char keyBind)
         {
-            _octave = octave;
-            _note = note;
+            Octave = octave;
+            Note = note;
             KeyBind = keyBind;
         }
     }
