@@ -10,11 +10,32 @@
 
             Octaves currentoctave = 0;
             Notes currentnote = Notes.C;
-            for(int i = 1; i <= 50; i++)
+            char currentchar = (char)97;
+            Boolean lastWasSharp = false;
+
+            for (int i = 1; i <= 50; i++)
             {
-                Keys.Add(new Key(currentoctave, currentnote, 'A'));
+                if (currentnote.ToString().Contains("sharp"))
+                {
+                    currentchar -= (char)32;
+                }
+
+                Keys.Add(new Key(currentoctave, currentnote, currentchar));
+
                 currentnote++;
-                if(currentnote == Notes.Dflat)
+                currentchar++;
+
+                if (currentnote.ToString().Contains("sharp"))
+                {
+                    currentchar--;
+                    lastWasSharp = true;
+                } else if(lastWasSharp == true)
+                {
+                    currentchar += (char)32;
+                    lastWasSharp = false;
+                }
+                
+                if (currentnote == Notes.Dflat)
                 {
                     currentoctave++;
                     currentnote = Notes.A;
