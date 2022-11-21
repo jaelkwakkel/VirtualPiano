@@ -9,7 +9,7 @@ namespace Controller
         /// <summary>
         /// Creates the piano for the program
         /// </summary>
-        /// <returns>Piano</returns>
+        /// <returns>Piano object</returns>
         public static Piano CreatePiano()
         {
             Piano piano = new Piano();
