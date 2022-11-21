@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controller\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{69303C30-91D7-485A-85E2-5F6AD169B892}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PianoHeroWPF", "PianoHeroWPF\PianoHeroWPF.csproj", "{D41C4546-DDCF-4EB6-8FDF-972A455D1F7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{69303C30-91D7-485A-85E2-5F6AD169B892}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69303C30-91D7-485A-85E2-5F6AD169B892}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69303C30-91D7-485A-85E2-5F6AD169B892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D41C4546-DDCF-4EB6-8FDF-972A455D1F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D41C4546-DDCF-4EB6-8FDF-972A455D1F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D41C4546-DDCF-4EB6-8FDF-972A455D1F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D41C4546-DDCF-4EB6-8FDF-972A455D1F7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
