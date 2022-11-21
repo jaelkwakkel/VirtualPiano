@@ -76,7 +76,7 @@ namespace PianoHeroWPF
 
             HeldDownKey += (char)32;
 
-            if (Keyboard.IsKeyDown(Key.LeftShift) || Keyboard.IsKeyDown(Key.RightShift))
+            if (Keyboard.IsKeyDown(Key.LeftShift) || Keyboard.IsKeyDown(Key.RightShift) || Keyboard.IsKeyDown(Key.CapsLock))
             {
                 HeldDownKey -= (char)32;
             }

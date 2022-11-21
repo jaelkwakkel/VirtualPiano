@@ -14,11 +14,8 @@ namespace Model
 
             Keys = new();
             AddKeys();
-           
+
         }
-
-        
-
 
         /// <summary>
         /// Binds the keys. White keys get assigned to a lower case character and black keys get assigned to an upper case characters. Default value is 'a'
@@ -29,29 +26,30 @@ namespace Model
         public char Keybindings(Notes currentnote, Key previous)
         {
             if (previous != null)
-            {                      
+            {
                 char currentChar = (char)(previous.KeyBind);
 
+                //UNDONE Uppercase letters get wrongly assigned
                 if (previous.Note.ToString().Contains("sharp") && !currentnote.ToString().Contains("sharp"))
                 {
                     return currentChar -= (char)31;
-                }else if (currentnote.ToString().Contains("sharp"))
+                }
+                else if (currentnote.ToString().Contains("sharp"))
                 {
-                   return currentChar += (char)32;
+                    return currentChar += (char)32;
                 }
                 else
                 {
                     return currentChar += (char)1;
                 }
-                
+
             }
             else
             {
                 return (char)97;
             }
-                 
-        }
 
+        }
 
         /// <summary>
         /// Adds all the keys of the piano with the correct octave, note and keybinding. 
@@ -65,7 +63,7 @@ namespace Model
             for (int i = 1; i <= 48; i++)
             {
                 Keys.Add(new Key(currentoctave, currentnote, Keybindings(currentnote, previous)));
-                previous = Keys[i-1];
+                previous = Keys[i - 1];
                 currentnote++;
                 if (currentnote == Notes.Unknown)
                 {
@@ -74,10 +72,12 @@ namespace Model
                 }
 
             }
-
-               
         }
 
+        /// <summary>
+        /// Handles the KeyDown event from MainWindow
+        /// </summary>
+        /// <param name="Key"></param>
         public void KeyDownHandler(char Key)
         {
             foreach (Key key in Keys)
@@ -90,6 +90,10 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Handles the KeyUp event from MainWindow
+        /// </summary>
+        /// <param name="Key"></param>
         public void KeyUpHandler(char Key)
         {
             foreach (Key key in Keys)

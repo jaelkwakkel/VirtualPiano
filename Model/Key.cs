@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Model
+﻿namespace Model
 {
 
     public class Key
     {
-        
-
         public Octaves Octave { get; set; }
         public Boolean PressedDown { get; set; }
         public Notes Note { get; set; }
