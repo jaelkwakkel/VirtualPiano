@@ -32,10 +32,10 @@
 
                 if (previous.Note.ToString().Contains("sharp") && !currentnote.ToString().Contains("sharp"))
                 {
-                    return currentChar -= (char)31;
+                    return currentChar += (char)33;
                 }else if (currentnote.ToString().Contains("sharp"))
                 {
-                   return currentChar += (char)32;
+                   return currentChar -= (char)32;
                 }
                 else
                 {

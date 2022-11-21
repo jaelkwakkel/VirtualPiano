@@ -10,7 +10,6 @@ namespace Model
     public class Key
     {
         
-
         public Octaves Octave { get; set; }
         public Boolean PressedDown { get; set; }
         public Notes Note { get; set; }
