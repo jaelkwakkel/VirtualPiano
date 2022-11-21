@@ -26,7 +26,10 @@ namespace PianoHeroWPF
         public MainWindow()
         {
             InitializeComponent();
+
+            //Create piano
             Piano = PianoController.CreatePiano();
+            //Add keydown event for the keys
             this.PreviewKeyDown += Piano.KeyDownEventHandler;
         }
 
