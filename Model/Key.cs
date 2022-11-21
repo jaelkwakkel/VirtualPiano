@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    internal class Key
+
+    public class Key
     {
+        public char KeyBind { get; set; }
+
+        public Key(char keyBind)
+        {
+            KeyBind = keyBind;
+        }
     }
 }

@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Controller;
+using Model;
 
 namespace PianoHeroWPF
 {
@@ -20,9 +22,13 @@ namespace PianoHeroWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Piano Piano { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            Piano = PianoController.CreatePiano();
+            this.PreviewKeyDown += Piano.KeyDownEventHandler;
         }
+
     }
 }
