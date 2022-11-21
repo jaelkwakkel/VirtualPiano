@@ -4,6 +4,9 @@
     {
         public List<Key> Keys { get; set; }
 
+        /// <summary>
+        /// Constructor for piano that creates 50 keys for itself.
+        /// </summary>
         public Piano()
         {
 
