@@ -10,7 +10,7 @@ namespace Model
     public class Key
     {
         private Octaves _octave;
-        private Notes _note;
+        public Notes _note;
         public Boolean PressedDown = false;
         public double Frequency;
         public char KeyBind { get; set; }
